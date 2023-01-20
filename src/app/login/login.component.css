@@ -1,0 +1,127 @@
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+   
+    
+    width: 120%;
+  }
+
+  
+
+  .input{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 10%;
+  }
+
+  p{
+    color: white;
+  }
+  .button{
+    display: flex;
+    margin-left: 35%;
+    
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
+
+
+
+  @-webkit-keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+    80% {
+      transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(30deg);
+    }
+  }
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+    80% {
+      transform: translateX(-100%) translateY(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(30deg);
+    }
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+   
+  }
+  
+  .box--gradient {
+    display: flex;
+    border-radius: 10px;
+    margin: 0 10px;
+    position: relative;
+    width: 300px;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .box--gradient p {
+   color: rgb(255, 255, 255);
+    flex-grow: 1;
+    margin: 0;
+    font-size: 30px;
+  }
+  .box--gradient:after {
+    content: "";
+    top: 0;
+    transform: translateX(100%) rotate(30deg);
+    width: 300%;
+    height: 300%;
+    position: absolute;
+    z-index: 1;
+    -webkit-animation: shine 3s infinite ease-in;
+            animation: shine 3s infinite ease-in;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(128, 186, 232, 0) 100%);
+  }
+  .box--gradient.silver {
+    background: linear-gradient(to bottom, #bcc6cc, #eee, #bcc6cc);
+  }
+  .box--gradient.gold {
+    background: linear-gradient(to bottom, #c39738, #deb761, #c39738);
+  }
+  .box--gradient.gold:after {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  .box--gradient.platinum {
+    background: linear-gradient(to bottom, #d5d7e5, #eee, #d5d7e5);
+  }
+  .box--gradient.platinum:after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
