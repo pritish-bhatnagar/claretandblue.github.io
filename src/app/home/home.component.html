@@ -1,0 +1,76 @@
+<body class="home">
+
+    <mat-drawer-container class="" autosize>
+      <mat-drawer #drawer class="" mode="push">
+        <app-sidedata  (opener)="drawer.toggle()"></app-sidedata>
+        <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+          Toggle extra text
+        </button> -->
+      </mat-drawer>
+    
+    
+    
+    
+    <mat-toolbar color={{theme}}>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+         
+                <mat-icon>menu</mat-icon>
+           
+        </button>
+   
+       
+        
+        <span><img src="https://pbs.twimg.com/media/EfJ7qS0WAAER9vN?format=png&name=900x900"></span>
+        
+        <span class="example-spacer"></span>
+        <div class="navigation-box">
+          <a routerLink="" class="nav-item">Signup</a>
+          <a routerLink="" class="nav-item">Login</a>
+         <a routerLink="" class="nav-item">Training</a>
+        </div>
+       
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="themec()">
+          <mat-icon>dark_mode</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="/home">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with share icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar>
+      <mat-progress-bar mode="indeterminate" [value]="progress"  *ngIf="progress!=100"></mat-progress-bar>
+
+    
+    
+      
+    <div class="content">
+      <router-outlet ></router-outlet> 
+    </div>
+    
+    
+   
+    </mat-drawer-container>
+   
+    </body>
+    
