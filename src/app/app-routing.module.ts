@@ -36,7 +36,6 @@ const routes: Routes = [
   {path: "dialog", component: DialogComponent },
   ]},
 
-
 ];
 
 @NgModule({
