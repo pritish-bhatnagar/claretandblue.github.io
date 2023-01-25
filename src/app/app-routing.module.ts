@@ -19,7 +19,7 @@ import { TabsComponent } from './tabs/tabs.component';
 
 
 const routes: Routes = [
-  {path: "login", component: LoginComponent },
+  {path: "logi", component: LoginComponent },
 
   {path: "", component: HomeComponent, children: [
   {path: "", component: DashboardComponent },
